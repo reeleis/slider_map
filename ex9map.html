@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Demo</title>
+    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css' />
+    <link rel="stylesheet" href="leaflet-slider.css"/>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js'></script>
+    <script src="leaflet-slider.js"></script>
+    
+    <script src='dataset.js'></script>
+    
+    <style type='text/css'>
+    
+    body { 
+      margin: 0; 
+      padding: 0; 
+      font-family: Helvetica, sans-serif;
+    }
+    
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    #overlay {
+      position: absolute;
+      top: 10px;
+      left: 80px;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.9);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+    
+    <img src="MapLegend.png" style="padding-right: 5px; z-index: 0; position: absolute; bottom: 124px; right: 0px;">
+    
+    <script type="text/javascript">
+    
+        
+    //***********************************************
+    // SET UP THE BACKGROUND MAP
+
+    // create the Leaflet map container
+    var map = L.map('map');
+    
+    // define a function to automate setting up Mapbox layers
+    function setUpMapboxLayer(id, token) {
+        return L.tileLayer('https://{s}.tiles.mapbox.com/v4/' + id + '/{z}/{x}/{y}.png?access_token=' + token, {
+            attribution: '&copy; <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        });
+    }
+    
+    // set up some tile layers and add one to the map
+    var normalBasemap = setUpMapboxLayer('leereis.o64o8a6a', 'pk.eyJ1IjoibGVlcmVpcyIsImEiOiJjaWdsNHkyaWEwMThhdXJrcmt0bXp6a2Z0In0.FdOBAP8wZrYj2hEohJGMpw');
+
+    map.addLayer(normalBasemap);
+
+    
+    //***********************************************
+    // 1. CREATE OVERLAY 
+
+    // specify what the circle markers should look like
+    
+    function overlayStyles(color) {
+      var style = {
+        radius: 6,
+        // fill styles
+        fillColor: color, fillOpacity: 0.8,
+        // border styles
+        color: 'black', opacity: 1, weight: 1
+      };
+      return style;
+    }    
+    
+    // specify how to load the individual features 
+    var overlayOptions = { 
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup('<b>Encounter Reason: </b>' + feature.properties.encounter_reason + '<br />' + 
+                            '<b>Encounter Result: </b>' + feature.properties.encounter_result + '<br />' + 
+                            '<b>Race: </b>' + feature.properties.race + '<br />' + 
+                            '<b>Gender: </b>' + feature.properties.gender
+                            //+ '<br />' + feature.geometry.coordinates
+                            );
+        },
+        pointToLayer: function (feature, latlng) {
+            switch(feature.properties.race) {
+              case 'Black':
+                return L.circleMarker(latlng, overlayStyles('green'));
+                break;
+              case 'White':
+                return L.circleMarker(latlng, overlayStyles('blue'));
+                break;
+              case 'Asian':
+                return L.circleMarker(latlng, overlayStyles('red'));
+                break;
+              case 'Hispanic':
+                return L.circleMarker(latlng, overlayStyles('orange'));
+                break;
+              default:
+                return L.circleMarker(latlng, overlayStyles('brown'));
+            }
+        }
+    };
+    
+    // create the layer and add to map
+    var overlay = L.geoJson(dataset, overlayOptions); 
+    map.addLayer(overlay);
+    
+    // fit the map window to the data points
+    map.fitBounds(overlay.getBounds());
+    
+    //map.on('moveend', function() { 
+    // alert(map.getBounds().toBBoxString());
+    //});
+//     slider = L.control.slider(function(value) {console.log(value);},
+//           'horizontal',
+//           {id:slider}).addTo(map);
+
+		slider = L.control.slider(function(value) {
+    			return value;
+			}, {
+    		max: 6,
+    		value: 5,
+    		step:0.1,
+    		size: '250px',
+    		orientation:'horizontal',
+    		id: 'slider',
+    		position:'bottomright',
+    		collapsed:false
+		}).addTo(map);
+		
+		slider2 = L.control.slider(function(value) {
+    			return value;
+			}, {
+    		max: 6,
+    		value: 5,
+    		step:0.1,
+    		size: '250px',
+    		orientation:'horizontal',
+    		id: 'slider2',
+    		position:'bottomright',
+    		collapsed:false
+		}).addTo(map);
+    
+    </script>
+</body>
+</html>
