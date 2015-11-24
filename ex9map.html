@@ -9,7 +9,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js'></script>
     <script src="leaflet-slider.js"></script>
     
-    <script src='dataset.js'></script>
+    <script src='dataset_ix.js'></script>
     
     <style type='text/css'>
     
@@ -86,29 +86,16 @@
     // specify how to load the individual features 
     var overlayOptions = { 
         onEachFeature: function (feature, layer) {
-            layer.bindPopup('<b>Encounter Reason: </b>' + feature.properties.encounter_reason + '<br />' + 
-                            '<b>Encounter Result: </b>' + feature.properties.encounter_result + '<br />' + 
-                            '<b>Race: </b>' + feature.properties.race + '<br />' + 
-                            '<b>Gender: </b>' + feature.properties.gender
-                            //+ '<br />' + feature.geometry.coordinates
+            layer.bindPopup('<b>ix1: </b>' + feature.properties.ix1 + '<br />' + 
+                            '<b>ix2: </b>' + feature.properties.ix2 + '<br />'
                             );
         },
         pointToLayer: function (feature, latlng) {
-            switch(feature.properties.race) {
-              case 'Black':
+            if(feature.properties.ix1*3 + feature.properties.ix2*1 > 0) {
                 return L.circleMarker(latlng, overlayStyles('green'));
-                break;
-              case 'White':
-                return L.circleMarker(latlng, overlayStyles('blue'));
-                break;
-              case 'Asian':
+            }
+            else {
                 return L.circleMarker(latlng, overlayStyles('red'));
-                break;
-              case 'Hispanic':
-                return L.circleMarker(latlng, overlayStyles('orange'));
-                break;
-              default:
-                return L.circleMarker(latlng, overlayStyles('brown'));
             }
         }
     };
