@@ -5,7 +5,7 @@
     
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css' />
     <link rel="stylesheet" href="leaflet-slider.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js'></script>
     <script src="leaflet-slider.js"></script>
     
@@ -65,33 +65,6 @@
     var normalBasemap = setUpMapboxLayer('leereis.o64o8a6a', 'pk.eyJ1IjoibGVlcmVpcyIsImEiOiJjaWdsNHkyaWEwMThhdXJrcmt0bXp6a2Z0In0.FdOBAP8wZrYj2hEohJGMpw');
 
     map.addLayer(normalBasemap);
-
-		slider = L.control.slider(function(value) {
-    			console.log(value);
-                return value;
-			}, {
-    		max: 6,
-    		value: 5,
-    		step:0.1,
-    		size: '250px',
-    		orientation:'horizontal',
-    		id: 'slider',
-    		position:'bottomright',
-    		collapsed:false
-		}).addTo(map);
-		
-		slider2 = L.control.slider(function(value) {
-    			return value;
-			}, {
-    		max: 6,
-    		value: 5,
-    		step:0.1,
-    		size: '250px',
-    		orientation:'horizontal',
-    		id: 'slider2',
-    		position:'bottomright',
-    		collapsed:false
-		}).addTo(map);
     
     //***********************************************
     // 1. CREATE OVERLAY 
@@ -117,7 +90,7 @@
                             );
         },
         pointToLayer: function (feature, latlng) {
-            if(feature.properties.ix1*slider.value + feature.properties.ix2*slider2.value > 0) {
+            if(feature.properties.ix1*1 + feature.properties.ix2*1 > 0) {
                 return L.circleMarker(latlng, overlayStyles('green'));
             }
             else {
@@ -133,54 +106,39 @@
     // fit the map window to the data points
     map.fitBounds(overlay.getBounds());
     
-    //map.on('moveend', function() { 
+		slider = L.control.slider(function(value) {
+    			return value;
+			}, {
+    		max: 6,
+    		value: 5,
+    		step:0.1,
+    		size: '250px',
+    		orientation:'horizontal',
+    		id: 'slider',
+    		position:'bottomright',
+    		collapsed:false
+		}).addTo(map);
+		
+		slider2 = L.control.slider(function(value) {
+    			return value;
+			}, {
+    		max: 6,
+    		value: 5,
+    		step:0.1,
+    		size: '250px',
+    		orientation:'horizontal',
+    		id: 'slider2',
+    		position:'bottomright',
+    		collapsed:false
+		}).addTo(map);
+
+        //map.on('moveend', function() { 
     // alert(map.getBounds().toBBoxString());
     //});
 //     slider = L.control.slider(function(value) {console.log(value);},
 //           'horizontal',
 //           {id:slider}).addTo(map);
 
-jQuery(document).ready(function($) {
-
-    var slider1 = $("#slider").slider({
-        max: 420,
-        min: 0,
-        step: 20,
-        change: function(event, ui) {
-            $("#s2").html(ui.value);    
-            $("#s2")
-        },
-        stop:Calculate
-    });
-
-    var slider2 = $("#slider2").slider({
-        max: 420,
-        min: 0,
-        step: 20,
-        change: function(event, ui) {
-            $("#s3").html(ui.value);    
-            $("#s3")
-        },
-        stop:Calculate
-
-    });
-
-    var div = $('#s4'); //cache this object in a variable if you'll be using it multiple times
-    function Calculate(){
-        var val1 = slider1.slider('option', 'value');
-        var val2 = slider2.slider('option', 'value');
-
-        var finalVal = (val1 + val2) / 2;
-        //update the ui
-        if (finalVal === 220) { //replace 220 with whatever you're checking
-           //if finalVal does equal 220
-           div.text('some text to display');
-        }else{
-           //if finalVal does not equal 220
-           div.text('some other text to display');
-        }
-    }
-});
     
     </script>
 </body>
