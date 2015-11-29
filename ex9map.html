@@ -91,7 +91,7 @@
     
     //Add a new array with the indices
     dataset.features = dataset.features.map(function(e) { 
-    e.properties.vector = [e.properties.ix_auto_p,
+    e.vector = [e.properties.ix_auto_p,
                 e.properties.ix_buvi_p,
                 e.properties.ix_disad_p,
                 e.properties.ix_fupo_p,
@@ -110,7 +110,7 @@
     //Take the dot product of the weights and index values and put in variable weightedValue
     function updateValue() {
       dataset.features = dataset.features.map(function(e) { 
-        e.properties.weightedValue = numeric.dot(e.properties.vector, weights); 
+        e.weightedValue = numeric.dot(e.vector, weights); 
         return e;
       });  
     }
@@ -144,7 +144,7 @@
   toggle = 'blue';
   
   function getColor(feature) {
-    if(toggle === 'blue') {
+    if(feature.weightedValue > 0.5) {
       return 'red';}
     else {
       return 'blue';}
@@ -153,10 +153,10 @@
   function mapStyle(feature) {
     return {
         fillColor: getColor(feature),
-        weight: 0,
+        color: 'black', opacity: 1, weight: 0.5,
         opacity: 1,
         //fillOpacity: getOpacity(data),
-        fillOpacity: 1,
+        fillOpacity: 0.7,
     };
   }
   
@@ -225,7 +225,7 @@
         '<b>id: </b>' + e.target.feature.id + '<br />' + 
         '<b>ix_auto_p: </b>' + e.target.feature.properties.ix_auto_p + '<br />' + 
         '<b>ix_disad_p: </b>' + e.target.feature.properties.ix_disad_p + '<br />' + 
-        '<b>value: </b>' + e.target.feature.properties.weightedValue + '<br />'
+        '<b>value: </b>' + e.target.feature.weightedValue + '<br />'
       );
     }
     
@@ -235,7 +235,7 @@
             layer.bindPopup('<b>id: </b>' + feature.id + '<br />' + 
                             '<b>ix_auto_p: </b>' + feature.properties.ix_auto_p + '<br />' + 
                             '<b>ix_disad_p: </b>' + feature.properties.ix_disad_p + '<br />' + 
-                            '<b>value: </b>' + feature.properties.weightedValue + '<br />'
+                            '<b>value: </b>' + feature.weightedValue + '<br />'
                             );
             layer.on({
               click: whenClicked
@@ -293,6 +293,7 @@
         updateWeights();
         updateValue();
         updateDisplay();
+        colorMap();
       }
       
       $(function() {
