@@ -50,6 +50,8 @@ for (var i = 0; i < arr.length; i++) {
     for (var j = 0; j < quantiles.length; j++) {
         if(quantiles[j] < arr[i] && arr[i] <= quantiles[j+1]) {
             counts[j]++;
+            console.log(j); // If we assign j, the number of the quantile, to each feature, we could then format that feature according to a switch statement elsewhere
+            // so, like, we have our seven colors predefined and we fill the feature with the color corresponding to quantile j
         }
     }
 }

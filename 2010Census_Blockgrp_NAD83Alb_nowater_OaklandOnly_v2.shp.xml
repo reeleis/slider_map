@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</origin>
+				<pubdate>2010</pubdate>
+				<title>TIGER/Line Shapefile, 2010, 2010 state, California, 2010 Census  Block Group State-based</title>
+				<edition>2010</edition>
+				<geoform>vector digital data</geoform>
+				<onlink>http://www.census.gov/geo/www/tiger</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB).  The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation.  Block Groups (BGs) are defined before tabulation block delineation and numbering, but are clusters of blocks within the same census tract that have the same first digit of their 4-digit census block number from the same decennial census.  For example, Census 2000 tabulation blocks 3001, 3002, 3003,.., 3999 within Census 2000 tract 1210.02 are also within BG 3 within that census tract.  Census 2000 BGs generally contained between 600 and 3,000 people, with an optimum size of 1,500 people.  Most BGs were delineated by local participants in the Census Bureau's Participant Statistical Areas Program (PSAP).  The Census Bureau delineated BGs only where the PSAP participant declined to delineate BGs or where the Census Bureau could not identify any local PSAP participant.  A BG usually covers a contiguous area.  Each census tract contains at least one BG, and BGs are uniquely numbered within census tract.  Within the standard census geographic hierarchy, BGs never cross county or census tract boundaries, but may cross the boundaries of other geographic entities like county subdivisions, places, urban areas, voting districts, congressional districts, and American Indian / Alaska Native / Native Hawaiian areas.  BGs have a valid code range of 0 through 9.  BGs coded 0 were intended to only include water area, no land area, and they are generally in territorial seas, coastal water, and Great Lakes water areas.  For Census 2000, rather than extending a census tract boundary into the Great Lakes or out to the U.S. nautical three-mile limit, the Census Bureau delineated some census tract boundaries along the shoreline or just offshore.  The Census Bureau assigned a default census tract number of 0 and BG of 0 to these offshore, water-only areas not included in regularly numbered census tract areas.  
+</abstract>
+			<purpose>In order for others to use the information in the Census MAF/TIGER database in a geographic information system (GIS) or for other geographic applications, the Census Bureau releases to the public extracts of the database in the form of TIGER/Line Shapefiles.</purpose>
+			<Subject_Entity>California(06)</Subject_Entity>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>201001</begdate>
+					<enddate>201007</enddate>
+				</rngdates>
+			</timeinfo>
+			<current>Publication Date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>TIGER/Line Shapefiles are extracted from the Census MAF/TIGER database.  No changes or updates will be made to this version of the TIGER/Line Shapefiles.  Future releases of TIGER/Line Shapefiles will reflect updates made to the Census MAF/TIGER database.</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-124.482003</westbc>
+				<eastbc>-114.131211</eastbc>
+				<northbc>42.009517</northbc>
+				<southbc>32.528832</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>ISO 19115 Topic Categories</themekt>
+				<themekey>boundaries</themekey>
+			</theme>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>State or equivalent entity</themekey>
+				<themekey>Polygon</themekey>
+				<themekey>Block Group</themekey>
+				<themekey>BG</themekey>
+			</theme>
+			<place>
+				<placekt>INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008</placekt>
+				<placekey>United States</placekey>
+				<placekey>U.S.</placekey>
+				<placekey>State or Equivalent Entity</placekey>
+				<placekey>California</placekey>
+				<placekey>CA</placekey>
+				<placekey>06</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>The TIGER/Line Shapefile products are not copyrighted however TIGER/Line and Census TIGER are registered trademarks of the U.S. Census Bureau.  These products are free to use in a product or publication, however acknowledgement must be given to the U.S. Census Bureau as the source.
+The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions.Coordinates in the TIGER/Line shapefiles have six implied decimal places, but the positional accuracy of these coordinates is not as great as the six decimal places suggest.</useconst>
+		<Title_13_Restrictions>Yes, the data are free from Title 13 restrictions</Title_13_Restrictions>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>U.S. Department of Commerce, U.S. Census Bureau, Geography Division, Geographic Products Branch</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>Mailing address</addrtype>
+					<address>4600 Silver Hill Road, Stop 7400</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20233-7400</postal>
+					<country>United States</country>
+				</cntaddr>
+				<cntvoice>301-763-1128</cntvoice>
+				<cntfax>301-763-4710</cntfax>
+				<cntemail>geo.tiger@census.gov</cntemail>
+			</cntinfo>
+		</ptcontac>
+	</idinfo>
+	<Data_Set_Character_Set>8859part1</Data_Set_Character_Set>
+	<Data_Set_Language>eng</Data_Set_Language>
+	<dataqual>
+		<attracc>
+			<attraccr>Accurate against Federal Information Processing Standards (FIPS), FIPS Publication 6-4, and FIPS-55 at the 100% level for the codes and base names.  The remaining attribute information has been examined but has not been fully tested for accuracy.</attraccr>
+		</attracc>
+		<logic>The Census Bureau performed automated tests to ensure logical consistency and limits of shapefiles.  Segments making up the outer and inner boundaries of a polygon tie end-to-end to completely enclose the area.  All polygons are tested for closure.
+The Census Bureau uses its internally developed geographic update system to enhance and modify spatial and attribute data in the Census MAF/TIGER database.  Standard geographic codes, such as FIPS codes for states, counties, municipalities, county subdivisions, places, American Indian/Alaska Native/Native Hawaiian areas, and congressional districts are used when encoding spatial entities.  The Census Bureau performed spatial data tests for logical consistency of the codes during the compilation of the original Census MAF/TIGER database files.  Most of the codes for geographic entities except states, counties, urban areas, Core Based Statistical Areas (CBSAs), American Indian Areas (AIAs), and congressional districts were provided to the Census Bureau by the USGS, the agency responsible for maintaining FIPS 55.  Feature attribute information has been examined but has not been fully tested for consistency.
+For the TIGER/Line Shapefiles, the Point and Vector Object Count for the G-polygon SDTS Point and Vector Object Type reflects the number of records in the shapefile attribute table.  For multi-polygon features, only one attribute record exists for each multi-polygon rather than one attribute record per individual G-polygon component of the multi-polygon feature.  TIGER/Line Shapefile multi-polygons are an exception to the G-polygon object type classification.  Therefore, when multi-polygons exist in a shapefile, the object count will be less than the actual number of G-polygons.</logic>
+		<complete>Data completeness of the TIGER/Line Shapefiles reflects the contents of the Census MAF/TIGER database at the time the TIGER/Line Shapefiles were created.</complete>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</origin>
+						<pubdate>Unpublished material</pubdate>
+						<title>Census MAF/TIGER database</title>
+					</citeinfo>
+				</srccite>
+				<typesrc>online</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>201001</begdate>
+							<enddate>201007</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>Publication Date</srccurr>
+				</srctime>
+				<srccitea>MAF/TIGER</srccitea>
+				<srccontr>The selected geographic and cartographic information (line segments) are derived from the U.S. Census Bureau's Master Address File Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) database.</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>TIGER/Line Shapefiles are extracted from the Census MAF/TIGER database by nation, state, county, and entity.  Census MAF/TIGER data for all of the aforementioned geographic entities are then distributed among the shapefiles each containing attributes for line, polygon, or landmark geographic data. </procdesc>
+				<srcused>Census MAF/TIGER</srcused>
+				<procdate>2010</procdate>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<indspref>Federal Information Processing Standards (FIPS), ANSI, and feature names.</indspref>
+		<direct>Vector</direct>
+		<ptvctinf><esriterm Name="2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<geodetic>
+				<horizdn>North American Datum of 1983 in the 48 contiguous states, the District of Columbia, Alaska, Hawaii, Puerto Rico, the Virgin Islands of the United States, and the Pacific Island Areas.</horizdn>
+				<ellips>Geodetic Reference System 80</ellips>
+				<semiaxis>6378137</semiaxis>
+				<denflat>298257</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda">
+			<enttyp>
+				<enttypl>BG10.shp</enttypl>
+				<enttypd>2010 Census Block Group State-based</enttypd>
+				<enttypds>U.S. Census Bureau</enttypds>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">0</enttypc></enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr>
+				<attrlabl>STATEFP10</attrlabl>
+				<attrdef>2010 Census state Federal Information Processing Standards
+                 (FIPS) codes</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>INCITS.38-200x (R2004), Codes for the Identification of
+                      the States, the District of Columbia, Puerto Rico, and the
+                      Insular Areas of the United States (Formerly FIPS 5-2)</codesetn>
+						<codesets>U.S. Census Bureau</codesets>
+					</codesetd>
+				</attrdomv>
+				<attalias Sync="TRUE">STATEFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>COUNTYFP10</attrlabl>
+				<attrdef>2010 Census county Federal Information Processing Standards
+                 (FIPS) code</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>INCITS.31-200x (R2007), Codes for the Identification of
+                      the Counties and Equivalent Areas of the United States,
+                      Puerto Rico, and the Insular Areas of the United States
+                      (Formerly FIPS 6-4)</codesetn>
+						<codesets>U.S. Census Bureau</codesets>
+					</codesetd>
+				</attrdomv>
+				<attalias Sync="TRUE">COUNTYFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">3</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>TRACTCE10</attrlabl>
+				<attrdef>2010 Census census tract code</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>000000</edomv>
+						<edomvd>Water tract in some coastal and Great Lakes water and
+                    territorial sea</edomvd>
+						<edomvds>U.S. Census</edomvds>
+					</edom>
+					<edom>
+						<edomv>000100 to 998999</edomv>
+						<edomvd>Census tract number</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">TRACTCE10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">6</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>BLKGRPCE10</attrlabl>
+				<attrdef>2010 Census block group number</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>0</edomv>
+						<edomvd>Water block group</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+					<edom>
+						<edomv>1 to 9</edomv>
+						<edomvd>Census 2000 block group code</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">BLKGRPCE10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">1</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>GEOID10</attrlabl>
+				<attrdef>Census block group identifier; a concatenation of 2010 Census
+                 state Federal Information Processing Standards (FIPS) code,
+                 county FIPS code, census tract code, and block group number</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>INCITS.38-200x (R2004), Codes for the Identification of
+                      the States, the District of Columbia, Puerto Rico, and the
+                      Insular Areas of the United States (Formerly FIPS 5-2),
+                      INCITS.31-200x (R2007), Codes for the Identification of
+                      the Counties and Equivalent Areas of the United States,
+                      Puerto Rico, and the Insular Areas of the United States
+                      (Formerly FIPS 6-4) and the tract code that appears in
+                      TRACTCE10 and the census block group number that appears
+                      in BLKGRPCE10</codesetn>
+						<codesets>U.S. Census Bureau</codesets>
+					</codesetd>
+				</attrdomv>
+				<attalias Sync="TRUE">GEOID10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">12</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>NAMELSAD10</attrlabl>
+				<attrdef>2010 Census translated legal/statistical area description and
+                 the block group number</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<udom>Refer to the block group number that appears in BLKGRPCE00 and
+                translated legal/statistical area description code BG, Block
+                Group</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">NAMELSAD10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">13</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>MTFCC10</attrlabl>
+				<attrdef>MAF/TIGER feature class code</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>G5030</edomv>
+						<edomvd>Block Group</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">MTFCC10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>FUNCSTAT10</attrlabl>
+				<attrdef>2010 Census functional status</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>S</edomv>
+						<edomvd>Statistical entity</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">FUNCSTAT10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">1</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>ALAND10</attrlabl>
+				<attrdef>2010 Census land area (square meters)</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>0 to 9,999,999,999,999</edomv>
+						<edomvd>Blank</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">ALAND10</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">14</attwidth><atprecis Sync="TRUE">14</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>AWATER10</attrlabl>
+				<attrdef>2010 Census water area (square meters)</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>0 to 9,999,999,999,999</edomv>
+						<edomvd>Blank</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">AWATER10</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">14</attwidth><atprecis Sync="TRUE">14</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>INTPTLAT10</attrlabl>
+				<attrdef>2010 Census latitude of the internal point</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>00</edomv>
+						<edomvd>Blank</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">INTPTLAT10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">11</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>INTPTLON10</attrlabl>
+				<attrdef>2010 Census longitude of the internal point</attrdef>
+				<attrdefs>U.S. Census Bureau</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>00</edomv>
+						<edomvd>Blank</edomvd>
+						<edomvds>U.S. Census Bureau</edomvds>
+					</edom>
+				</attrdomv>
+				<attalias Sync="TRUE">INTPTLON10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">12</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">FIPS2</attrlabl><attalias Sync="TRUE">FIPS2</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">FIPSjoin</attrlabl><attalias Sync="TRUE">FIPSjoin</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">15</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">LowVehHH</attrlabl><attalias Sync="TRUE">LowVehHH</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">ZeroVehHH</attrlabl><attalias Sync="TRUE">ZeroVehHH</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">HHBelowMed</attrlabl><attalias Sync="TRUE">HHBelowMed</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">PctNonWht</attrlabl><attalias Sync="TRUE">PctNonWht</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">K12Stud</attrlabl><attalias Sync="TRUE">K12Stud</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">Seniors</attrlabl><attalias Sync="TRUE">Seniors</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">Disabled</attrlabl><attalias Sync="TRUE">Disabled</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">FoodStamps</attrlabl><attalias Sync="TRUE">FoodStamps</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncomeQ1</attrlabl><attalias Sync="TRUE">IncomeQ1</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncomeQ2</attrlabl><attalias Sync="TRUE">IncomeQ2</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncomeQ3</attrlabl><attalias Sync="TRUE">IncomeQ3</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncomeQ4</attrlabl><attalias Sync="TRUE">IncomeQ4</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">10</attwidth><atprecis Sync="TRUE">10</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">ix_equity</attrlabl><attalias Sync="TRUE">ix_equity</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncQ1Pct</attrlabl><attalias Sync="TRUE">IncQ1Pct</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncQ2Pct</attrlabl><attalias Sync="TRUE">IncQ2Pct</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncQ3Pct</attrlabl><attalias Sync="TRUE">IncQ3Pct</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">IncQ4Pct</attrlabl><attalias Sync="TRUE">IncQ4Pct</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>U.S. Department of Commerce, U.S. Census Bureau, Geography Division, Geographic Products Branch</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>Mailing address</addrtype>
+					<address>4600 Silver Hill Road, Stop 7400</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20233-7400</postal>
+					<country>United States</country>
+				</cntaddr>
+				<cntvoice>301-763-1128</cntvoice>
+				<cntfax>301-763-4710</cntfax>
+				<cntemail>geo.tiger@census.gov</cntemail>
+			</cntinfo>
+		</distrib>
+		<distliab>No warranty, expressed or implied is made with regard to the accuracy of these data, and no liability is assumed by the U.S. Government in general or the U.S. Census Bureau in specific as to the spatial or attribute accuracy of the data.  The act of distribution shall not constitute any such warranty and no responsibility is assumed by the U.S. government in the use of these files.  The boundary information in the TIGER/Line Shapefiles is for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes do not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>TGRSHP (compressed)</formname>
+					<filedec>PK-ZIP, version 1.93 A or higher</filedec>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://www.census.gov/geo/www/tiger</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+					<offoptn>
+						<offmedia>DVD-ROM (Only if offered offline)</offmedia>
+						<recfmt>ISO 9660</recfmt>
+					</offoptn>
+				</digtopt>
+			</digform>
+			<fees>The online copy of the TIGER/Line files may be accessed without charge.</fees>
+			<ordering>To obtain more information about ordering TIGER/Line shapefiles visit http://www.census.gov/geo/www/tiger </ordering>
+		</stdorder>
+		<techpreq>The TIGER/Line shapefiles contain geographic data only and do not include display mapping software or statistical data.  For information on how to use the TIGER/Line shapefile data with specific software package users shall contact the company that produced the software.</techpreq>
+	</distinfo>
+	<metainfo>
+		<metd>20100507</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>U.S. Department of Commerce, U.S. Census Bureau, Geography Division, Geographic Products Branch</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>Mailing address</addrtype>
+					<address>4600 Silver Hill Road, Stop 7400</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20233-7400</postal>
+					<country>United States</country>
+				</cntaddr>
+				<cntvoice>301-763-1128</cntvoice>
+				<cntfax>301-763-4710</cntfax>
+				<cntemail>geo.tiger@census.gov</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<Metadata_Character_Set>8859part1</Metadata_Character_Set>
+		<Metadata_File_Identifier>tl_2010_06_bg10.shp.xml</Metadata_File_Identifier>
+		<Metadata_Language>eng</Metadata_Language>
+	</metainfo>
+	<Esri><CreaDate>20151107</CreaDate><CreaTime>23053600</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>FALSE</SyncOnce><DataProperties><lineage><Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20111118" Time="151557">Project 2010_Census_BlockGroup D:\Data\OurSpace\Base_Data\Census\2010Census_CABlockGroup_NAD83.shp PROJCS['Albers',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Albers'],PARAMETER['false_easting',0.0],PARAMETER['false_northing',-4000000.0],PARAMETER['central_meridian',-120.0],PARAMETER['standard_parallel_1',34.0],PARAMETER['standard_parallel_2',40.5],PARAMETER['latitude_of_origin',0.0],UNIT['Meter',1.0]] # GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130820" Time="120055">CalculateField 2010Census_CABlockGroup_NAD83Alb FIPS2 left([GEOID10],11) VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130820" Time="120118">CalculateField 2010Census_CABlockGroup_NAD83Alb FIPS2 left([GEOID10],12) VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151015" Time="194252">CalculateField 2010Census_Blockgrp_NAD83Alb_indicators ix_equity "1*!LowVehHH!+ 1*!ZeroVehHH!+ 0.9*!HHBelowMed!+ 0.7*!PctNonWht!+ 0.8*!K12Stud!+ 0.5*!Seniors!+ 0.5*!Disabled!+ 0.5*!FoodStamps!+ 0.8*!IncQ1Pct!+ 0.6*!IncQ2Pct!+ 0.4*!IncQ3Pct!+ 0.2*!IncQ4Pct!" PYTHON_9.3 #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="164353">CalculateField 2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda ix_lowauto "[LowVehHH]+ [ZeroVehHH]+ (0.8* [K12Stud]) + (0.5* [Seniors])" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="171135">CalculateField 2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda HighEarn25 [Sum_HIGH_E] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="175555">CalculateField 2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda TotalPop [B01001001n] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="181240">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TotalJobs [TotalJobs] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="181311">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TotalJobs [Sum_c000] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="181523">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TotalJobs [Sum_c000] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="182116">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TotalPop25 [Sum_TotalP] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="182203">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TotalJob25 [Sum_TotalJ] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="182310">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly HighEarn25 [Sum_HIGH_E] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="182351">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly IncomeQ425 [Sum_Inco_3] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151027" Time="182420">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly HighEarn "[HIGH_EARN] " VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151028" Time="171522">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TotPop2000 [P007001o] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151028" Time="172427">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly PopChange (1/13)*(( [TotalPop]- [TotPop2000])/ [TotPop2000]) VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151028" Time="172618">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly PopChange (1/13)*(( [TotalPop]- [TotPop2000])/ [TotPop2000]) VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151028" Time="172711">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly JobChange (1/10)*(( [TotalJobs]- [TotJob2003])/ [TotJob2003]) VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151028" Time="210341">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly bart_dis [NEAR_DIST] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151028" Time="210523">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly actran_dis [NEAR_DIST] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151029" Time="125745">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly PctPDA "[Area]/ [AreaTot]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151029" Time="130439">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly PctPDA "[AreaPDA]/ [AreaTot]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="154930">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TRACTID10 "!STATEFP10!+ !COUNTYFP10!+ !TRACTCE10!" PYTHON_9.3 #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="155150">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly TransCost [t_nmi] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="155952">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly VoucherPct !HCV_PCT_RE! PYTHON_9.3 #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="171820">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ZeroVehH_0 [ZeroVehH_1] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="174538">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly busserv [Count_] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="175424">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ZeroVehH_1 0 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="175500">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ZeroVehH [ZeroVehH] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151103" Time="175536">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ZeroVehH [ZeroVehH_1] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="163825">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ZeroVehHH [ZeroVehH] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="163850">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_auto [LowVehHH]*1+[ZeroVehHH]*1+[K12Stud]*0.8+[Seniors]*0.5 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="163946">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_disad [TransCost]*0.5+[LowEnglish]*0.3+[VoucherPct]*0.3+[PubHouCnt]*0.5+[IncQ1Pct]*0.8+[IncQ2Pct]*0.4+[IncQ3Pct]*0+[IncQ4Pct]*-0.4+[PctNonWht]*0.7+[Disabled]*0.5+[FoodStamps]*0.5 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="164118">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_tcfe [bartdist]*1+[busserv]*0.8+[ferrydist]*0.4+[amtrakdist]*0.4+[intbusdist]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="164149">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_tcco [BartThr]*1+[ACTransThr]*0.8+[FerryThr]*0.4+[AmtrakThr]*0.4+[IntBusThr]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="164308">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_res [Liq_Value]*0.7+[WillFlood]*-0.5+[SLR_1ft]*-0.8+[SLR_3ft]*-0.6+[SLR_5ft]*-0.4+[FireThreat]*-0.6 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="164342">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_buvi [TransCost]*0.2+[TotalPop25]*0.8+[IncomeQ425]*0.8+[TotalJob25]*1+[HighEarn25]*1+[HighEarn]*1+[CarShaCnt]*0.2 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="164409">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_fupo [PctPDA]*0.8+[PopChange]*0.6+[JobChange]*0.8 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="170843">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly ix_auto_z [LowVehHH_z]*1+[ZeroVehH_z]*1+[K12Stud_z]*0.8+[Seniors_z]*0.5	 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="174428">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly studyarea 1 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="174623">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly oakland 1 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="101050">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly DestKDE [RASTERVALU] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230727">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_auto_z [LowVehHH_z]*1+[ZeroVehH_z]*1+[K12Stud_z]*0.8+[Seniors_z]*0.5 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230738">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_disad_z [TransCos_z]*0.5+[LowEngli_z]*0.3+[VoucherP_z]*0.3+[PubHouCt_z]*0.5+[IncQ1Pct_z]*0.8+[IncQ2Pct_z]*0.4+[IncQ3Pct_z]*0+[IncQ4Pct_z]*-0.4+[PctNonWh_z]*0.7+[Disabled_z]*0.5+[FoodStam_z]*0.5 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230753">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_tcfe_z [bartdist_z]*1+[busserv_z]*0.8+[ferrydis_z]*0.4+[amtrdist_z]*0.4+[intbdist_z]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230803">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_tcco_z [BartThr]*1+[ACTransThr]*0.8+[FerryThr]*0.4+[AmtrakThr]*0.4+[IntBusThr]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230816">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_luc_z [DestKDE_z]*0.8+[schldist_z]*0.5+[hlthdist_z]*0.5+[sservdis_z]*0.5+[parkdist_z]*0.4+[TtlJob25_z]*0.7 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230828">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_res_z [Liq_Valu_z]*0.7+[WillFlood]*-0.5+[SLR_1ft]*-0.8+[SLR_3ft]*-0.6+[SLR_5ft]*-0.4+[FireThrt_z]*-0.6 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230839">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_buvi_z [TransCos_z]*0.2+[TtlPop25_z]*0.8+[IncomeQ4_z]*0.8+[TtlJob25_z]*1+[HiEarn25_z]*1+[HighEarn_z]*1+[CarShaCt_z]*0.2 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151107" Time="230849">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_fupo_z [PctPDA_z]*0.8+[PpChange_z]*0.6+[JbChange_z]*0.8 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151108" Time="173721">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_tcfe_z1 [bartdist_z]*1+[busserv_z]*-0.8+[ferrydis_z]*0.4+[amtrdist_z]*0.4+[intbdist_z]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151108" Time="175237">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_tcco_z1 [BartThr]*1+[busserv_z]*0.8+[FerryThr]*0.4+[AmtrakThr]*0.4+[IntBusThr]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151108" Time="182454">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_res_z1 [Liq_Valu_z]*-0.7+[WillFlood]*-0.5+[SLR_1ft]*-0.4+[SLR_3ft]*-0.4+[SLR_5ft]*-0.4+[FireThrt_z]*-0.6 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151112" Time="174726">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_lufe_z [DestKDE_z]*-0.8+[schldist_z]*0.5+[hlthdist_z]*0.5+[sservdis_z]*0.5+[parkdist_z]*0.4+[TtlJob25_z]*-0.7 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151112" Time="175002">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_luco_z [DestKDE_z]*0.8+[schldist_z]*-0.5+[hlthdist_z]*-0.5+[sservdis_z]*-0.5+[parkdist_z]*-0.4+[TtlJob25_z]*0.7 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151114" Time="155348">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 tcludiff "Abs ( [ix_tcco_p]- [ix_luco_p] )" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151114" Time="155657">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 tclusum "0.5* [ix_luco_p]+0.5* [ix_tcco_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151114" Time="160058">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 tclusum1 "0.5* [ix_lufe_p]+0.5* [ix_tcfe_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="143314">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 tlu_sum_hi "0.5* [ix_tcco_p]+0.5* [ix_luco_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="143348">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 tlu_sum_lo "0.5* [ix_tcfe_p]+0.5* [ix_lufe_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="143603">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_popneed "[ix_auto_p]+ [ix_disad_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="144130">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_resil [ix_res_p] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="144151">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_needres "[ix_res_p]+ [ix_disad_p]+ [ix_auto_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="144216">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_buvi "[ix_buvi_p]+ [ix_fupo_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="144315">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_resgrow "[ix_res_p] + [ix_fupo_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="144342">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_thilulo "[ix_tcfe_p]+ [ix_luco_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151116" Time="144447">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all "[ix_auto_p]+0.9* [ix_disad_p]+0.7* [ix_res_p]+ [ix_buvi_p]+0.6* [ix_fupo_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="114610">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_buvi_ol [ix_buvi_z] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="114750">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_buvi_z [TransCos_z]*0.2+[TtlPop25_z]*0.8+[IncomeQ4_z]*0.8+[TtlJob25_z]*1+[HiEarn25_z]*1+[CarShaCt_z]*0.2 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="114843">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 buvi_ratio "[ix_buvi_ol] / [ix_buvi_z]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="184906">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_buvi_po [ix_buvi_p] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="184938">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_buvi_p [ix_buvi__1] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185131">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 buvidiff "[ix_buvi_po] - [ix_buvi_p]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185246">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_buvi_ol [sc_buvi] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185320">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_buvi "[ix_buvi_p]*1.0 + [ix_fupo_p]*1.0" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185515">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_old [sc_all] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185627">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all "[ix_auto_p]*1.0 + [ix_disad_p]*0.9 + [ix_res_p]*0.7 + [ix_buvi_p]*1.0 + [ix_fupo_p]*0.6 + [ix_tcfe_p]*0.5 + [ix_tcco_p]*0.5 + [ix_lufe_p]*0.5 + [ix_luco_p]*0.5" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185908">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all "[ix_auto_p]*1.0 + [ix_disad_p]*0.9 + [ix_res_p]*0.7 + [ix_buvi_p]*1.0 + [ix_fupo_p]*0.6" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151121" Time="185940">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_dif "[sc_all] - [sc_all_old]" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="162538">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_flat "[ix_auto_p]*1.0 + [ix_disad_p]*1.0 + [ix_res_p]*1.0 + [ix_buvi_p]*1.0 + [ix_fupo_p]*1.0" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="162629">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_alt1 "[ix_auto_p]*1.0 + [ix_disad_p]*1.0 + [ix_res_p]*1.0 + [ix_buvi_p]*0.5 + [ix_fupo_p]*0.5" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="162810">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_alt2 "[ix_auto_p]*0.6 + [ix_disad_p]*0.8 + [ix_res_p]*1.0 + [ix_buvi_p]*0.4 + [ix_fupo_p]*0.7" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="164514">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_hi "[sc_all]*1.0 + [ix_tcco_p]*0.5 + [ix_luco_p]*0.5" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="164551">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_lo "[sc_all]*1.0 + [ix_tcfe_p]*0.5 + [ix_lufe_p]*0.5" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="165342">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_hi2 "[sc_all]*1.0 + [ix_tcco_p]*1.0 + [ix_luco_p]*1.0" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151123" Time="165353">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_lo2 "[sc_all]*1.0 + [ix_tcfe_p]*1.0 + [ix_lufe_p]*1.0" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151124" Time="223849">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 healthdist [NEAR_DIST] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151124" Time="232132">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 amtrakdist [NEAR_DIST] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="174227">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 AmtkThrOld [AmtrakThr] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="174238">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 AmtrakThr 0 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="174319">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 AmtrakThr 1 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="180921">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 hlthdist_z [hlthdis_z1] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="180932">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 amtrdist_z [amtrdis_z1] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="182719">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_tcfe_z [bartdist_z]*1+[busserv_z]*-0.8+[ferrydis_z]*0.4+[amtrdist_z]*0.4+[intbdist_z]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="182738">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_tcco_z [BartThr]*1+[busserv_z]*0.8+[FerryThr]*0.4+[AmtrakThr]*0.4+[IntBusThr]*0.4 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="182818">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_lufe_z [DestKDE_z]*-0.8+[schldist_z]*0.5+[hlthdist_z]*0.5+[sservdis_z]*0.5+[parkdist_z]*0.4+[TtlJob25_z]*-0.7 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="182831">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 ix_luco_z [DestKDE_z]*0.8+[schldist_z]*-0.5+[hlthdist_z]*-0.5+[sservdis_z]*-0.5+[parkdist_z]*-0.4+[TtlJob25_z]*0.7 VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="184732">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_thilulo "[ix_tcfe_p]*1.0 + [ix_luco_p]*1.0" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="184759">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_hi "[sc_all]*1.0 + [ix_tcco_p]*0.5 + [ix_luco_p]*0.5" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="184812">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_lo "[sc_all]*1.0 + [ix_tcfe_p]*0.5 + [ix_lufe_p]*0.5" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="185009">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_h2o [sc_all_hi2] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="185033">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_l2o [sc_all_l2o] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="185044">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_l2o [sc_all_lo2] VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="185104">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_hi2 "[sc_all]*1.0 + [ix_tcco_p]*1.0 + [ix_luco_p]*1.0" VB #</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151125" Time="185118">CalculateField 2010Census_Blockgrp_NAD83Alb_nowater_OaklandOnly_v2 sc_all_lo2 "[sc_all]*1.0 + [ix_tcfe_p]*1.0 + [ix_lufe_p]*1.0" VB #</Process></lineage><itemProps><itemLocation><linkage Sync="TRUE">file://\\SAM\D$\Box Sync\218_Studio\218_mobility_hub_data_repository\Indicators\2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnlyCopy</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><itemName Sync="TRUE">2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize></itemProps><copyHistory><copy source="D:\Box Sync\218_Studio\218_mobility_hub_data_repository\Indicators\2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnly" dest="\\SAM\D$\Box Sync\218_Studio\218_mobility_hub_data_repository\Indicators\2010Census_Blockgrp_NAD83Alb_nowater_AlamedaCountyOnlyCopy" date="20151106" time="18241800"></copy></copyHistory><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits><projcsn Sync="TRUE">Albers</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;Albers&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Albers&amp;quot;],PARAMETER[&amp;quot;false_easting&amp;quot;,0.0],PARAMETER[&amp;quot;false_northing&amp;quot;,-4000000.0],PARAMETER[&amp;quot;central_meridian&amp;quot;,-120.0],PARAMETER[&amp;quot;standard_parallel_1&amp;quot;,34.0],PARAMETER[&amp;quot;standard_parallel_2&amp;quot;,40.5],PARAMETER[&amp;quot;latitude_of_origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-16909700&lt;/XOrigin&gt;&lt;YOrigin&gt;-8597000&lt;/YOrigin&gt;&lt;XYScale&gt;266332319.7555542&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef></DataProperties><SyncDate>20151017</SyncDate><SyncTime>18594800</SyncTime><ModDate>20151017</ModDate><ModTime>18594800</ModTime></Esri><dataIdInfo><envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.2.2.3552</envirDesc><dataLang><languageCode value="eng" Sync="TRUE"></languageCode><countryCode value="USA" Sync="TRUE"></countryCode></dataLang><idCitation><resTitle Sync="TRUE">2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda</resTitle><presForm><PresFormCd value="005" Sync="TRUE"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd value="001" Sync="TRUE"></SpatRepTypCd></spatRpType></dataIdInfo><mdLang><languageCode value="eng" Sync="TRUE"></languageCode><countryCode value="USA" Sync="TRUE"></countryCode></mdLang><mdChar><CharSetCd value="006" Sync="TRUE"></CharSetCd></mdChar><distInfo><distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo><mdHrLv><ScopeCd value="005" Sync="TRUE"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><refSysInfo><RefSystem><refSysID><identCode code="0" Sync="TRUE"></identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><geometObjs Name="2010Census_Blockgrp_NAD83Alb_indicators_erased_alameda"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20151017</mdDateSt></metadata>
