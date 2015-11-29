@@ -28,7 +28,67 @@
   #blue .ui-slider-range { background: #729fcf; }
   #blue .ui-slider-handle { border-color: #729fcf; }
   </style>
+  
   <script>
+  var dataset = {
+    "type": "FeatureCollection", 
+    "features": [
+      {
+        "geometry": {
+          "type": "Point", 
+          "coordinates": [
+            -122.24847359, 
+            37.85465357
+          ]
+        }, 
+        "type": "Feature", 
+        "properties": {
+          "issue_description": "Commercial Cart Size Increase", 
+          "issue_type": "Refuse and Recycling", 
+          "ix2": -0.34355217297684026, 
+          "ix1": -0.8719419493959863, 
+          "ticket_status": "Closed", 
+          "street_address": "3084 Claremont Ave"
+        }
+      }, 
+      {
+        "geometry": {
+          "type": "Point", 
+          "coordinates": [
+            -122.2579381, 
+            37.86277936
+          ]
+        }, 
+        "type": "Feature", 
+        "properties": {
+          "issue_description": "Residential Site Inspection", 
+          "issue_type": "Refuse and Recycling", 
+          "ix2": 0.8322722150659783, 
+          "ix1": 0.5376459270099696, 
+          "ticket_status": "Closed", 
+          "street_address": "2612 Regent St"
+        }
+      }, 
+      {
+        "geometry": {
+          "type": "Point", 
+          "coordinates": [
+            -122.27320847, 
+            37.85705678
+          ]
+        },
+        "type": "Feature", 
+        "properties": {
+          "issue_description": "Residential Lost or Stolen Cart", 
+          "issue_type": "Refuse and Recycling", 
+          "ix2": 0.6613519418936902, 
+          "ix1": -0.562704579065204, 
+          "ticket_status": "Closed", 
+          "street_address": "1747 Oregon St"
+        }
+      }
+    ]
+  };
   function hexFromRGB(r, g, b) {
     var hex = [
       r.toString( 16 ),
@@ -43,27 +103,27 @@
     return hex.join( "" ).toUpperCase();
   }
   function refreshSwatch() {
-    var red = $( "#red" ).slider( "value" ),
-      green = $( "#green" ).slider( "value" ),
-      blue = $( "#blue" ).slider( "value" ),
-      number = 1*red + 2*green + 3*blue;
+    var red = ($( "#red" ).slider( "value" ) - 10) / 10.0,
+      green = ($( "#green" ).slider( "value" ) - 10) / 10.0,
+      blue = ($( "#blue" ).slider( "value" ) - 10) / 10.0,
+      number = red + green + blue;
 //      hex = hexFromRGB( red, green, blue );
-    if(number > 500) { $( "#swatch" ).css( "background-color", "#333333" ); }
+    if(number > 1) { $( "#swatch" ).css( "background-color", "#333333" ); }
     else { $( "#swatch" ).css( "background-color", "#999999" ); }
-    document.getElementById( "swatch" ).innerHTML = number;
+    document.getElementById( "swatch" ).innerHTML = number;    
   }
   $(function() {
     $( "#red, #green, #blue" ).slider({
       orientation: "horizontal",
       range: "min",
-      max: 255,
-      value: 127,
+      max: 20,
+      value: 10,
       slide: refreshSwatch,
       change: refreshSwatch
     });
-    $( "#red" ).slider( "value", 255 );
-    $( "#green" ).slider( "value", 140 );
-    $( "#blue" ).slider( "value", 60 );
+    $( "#red" ).slider( "value", 10 );
+    $( "#green" ).slider( "value", 10 );
+    $( "#blue" ).slider( "value", 10 );
   });
   </script>
 </head>
