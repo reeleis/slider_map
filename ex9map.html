@@ -119,7 +119,7 @@
   
     function preprocess() {
 
-//The following code 
+//The following code is from 'The Bay Area Zip Code Singles Map.html', might help us
     // Let's get a distribution for the scale
 //     var values = map_data.values();
 //     for(var i = 0, ilen = values.length; i < ilen; i++) {
@@ -140,7 +140,26 @@
 //       populations[parseInt(populations.length * 0.9)],
 //     ])
   }
-     
+  
+  toggle = 'blue';
+  
+  function getColor(feature) {
+    if(toggle === 'blue') {
+      return 'red';}
+    else {
+      return 'blue';}
+  }
+  
+  function mapStyle(feature) {
+    return {
+        fillColor: getColor(feature),
+        weight: 0,
+        opacity: 1,
+        //fillOpacity: getOpacity(data),
+        fillOpacity: 1,
+    };
+  }
+  
   function colorMap() {
     if(!overlay)
       return;
