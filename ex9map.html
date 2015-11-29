@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Map Demo</title>
+    <title>THE FUTURE OF TRANSPORTATION PLANNING brought to you by A TON OF BADASS NEW GODS</title>
     
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css' />
 <!--     <link rel="stylesheet" href="leaflet-slider.css"/> -->
@@ -47,16 +47,27 @@
       font-weight: bold;
     }
     
-    #red, #green, #blue {
-/*     position:'bottomright'; */
+    #auto, #buvi, #disad, #fupo {
+/*    position:'bottomleft';  How to move them away from top left? */
     clear: left;
     width: 300px;
     margin: 15px;
   }
   /* Color slider stylings*/
-  #red .ui-slider-range { background: #ffffff; }
-  #green .ui-slider-range { background: #ffffff; }
-  #blue .ui-slider-range { background: #ffffff; }
+  #swatch {
+    width: 120px;
+    height: 100px;
+    margin-top: 18px;
+    margin-left: 350px;
+    background-image: none;
+    z-index: 10;
+  }
+  #auto .ui-slider-range { background: #ffffff; }
+  #buvi .ui-slider-range { background: #ffffff; }
+  #disad .ui-slider-range { background: #ffffff; }
+  #fupo .ui-slider-range { background: #ffffff; }
+  
+/*   #disad .ui-slider-handle { border-color: #729fcf; } */
   
     </style>
 </head>
@@ -66,9 +77,11 @@
     <div id="map"></div>
     
     <!--<img src="MapLegend.png" style="padding-right: 5px; z-index: 0; position: absolute; bottom: 124px; right: 0px;">-->
-    <div id="red"></div>
-    <div id="green"></div>
-    <div id="blue"></div>
+    <!-- These are ass-ugly, but they appear to work. Clean at another point! -->
+    <div id="auto">Low Automobility</div>
+    <div id="buvi"></div>
+    <div id="disad"></div>
+    <div id="fupo"></div>
 <!--     <div id="swatch" class="ui-widget-content ui-corner-all"></div> -->
     <script type="text/javascript">
     
@@ -77,6 +90,9 @@
     
     //These are the variable names within the dataset:
     //'ix_auto_p', 'ix_buvi_p', 'ix_disad_p', 'ix_fupo_p', 'ix_luco_p', 'ix_lufe_p', 'ix_res_p', 'ix_tcco_p', 'ix_tcfe_p', 'sc_all'
+    //sc_all doesn't participate in the dot product; rather, we include it only to initialize the choropleth values for each feature
+    //at some point soon it might make sense to just drop it from the dataset entirely; 
+    //in any case we will overwrite it every time the sliders move.
     
     //Add a new array with the indices
     dataset.features = dataset.features.map(function(e) { 
@@ -88,13 +104,21 @@
                 e.properties.ix_lufe_p,
                 e.properties.ix_res_p,
                 e.properties.ix_tcco_p,
-                e.properties.ix_tcfe_p,
-                e.properties.sc_all]; 
+                e.properties.ix_tcfe_p]; 
     return e;
     });  
     
     //Initialize the weights variable so that we can initialize the popups
-    var weights = [1,0,0,0,0,0,0,0,0,0];
+    //These are the weights we used in the sc_all scenario
+    var weights = [1.0, // auto
+                   1.0, // buvi
+                   0.9, // disad
+                   0.6, // fupo
+                   0.0, // luco
+                   0.0, // lufe
+                   0.7, // res
+                   0.0, // tcco
+                   0.0]; // tcfe
     
     //Take the dot product of the weights and index values and put in variable weightedValue
     function updateValue() {
@@ -106,35 +130,24 @@
     
     updateValue();
   
-    function preprocess() {
-
-//The following code is from 'The Bay Area Zip Code Singles Map.html', might help us
-    // Let's get a distribution for the scale
-//     var values = map_data.values();
-//     for(var i = 0, ilen = values.length; i < ilen; i++) {
-//       try {
-//         var population = currentPopulation(values[i], 'women') + currentPopulation(values[i], 'men');
-//         populations.push(population);
-//       } catch(e) {
-//         //console.log("Failed on ", values[i]);
-//       }
-//     }
-//     populations = populations.sort(function(a,b) { return a - b; });
-//     opacityScale.domain([
-//       populations[parseInt(populations.length * 0.0)],
-//       populations[parseInt(populations.length * 0.2)],
-//       populations[parseInt(populations.length * 0.45)],
-//       populations[parseInt(populations.length * 0.6)],
-//       populations[parseInt(populations.length * 0.75)],
-//       populations[parseInt(populations.length * 0.9)],
-//     ])
-  }
+//    function preprocess() {
+//    }
+  
+  toggle = 'blue';
+  
+  // Initialize cutpoints based on ArcMap values; these will change very soon, but good to have a sensical first display
+  cutpoints = [-1.0, 1.416310, 1.670429, 1.914083, 2.158158, 2.496907, 2.827570, 3.521689];
+  colors = ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4']
   
   function getColor(feature) {
-    if(feature.weightedValue > 0.5) {
-      return 'red';}
-    else {
-      return 'blue';}
+    // Iterate over our several quantiles; if the feature falls into one, return that quantile's color
+    for (var j = 0; j < cutpoints.length; j++) {
+      if(cutpoints[j] < feature.weightedValue && feature.weightedValue <= cutpoints[j+1]) {
+        return colors[j];
+      }
+    }
+    // if this somehow doesn't pick up a feature, mark it gray as a fail safe
+    return 'gray';
   }
   
   //For each feature, returns the styling
@@ -144,7 +157,7 @@
         color: 'black', opacity: 1, weight: 0.5,
         opacity: 1,
         //fillOpacity: getOpacity(data),
-        fillOpacity: 0.7,
+        fillOpacity: 0.8,
     };
   }
   
@@ -172,22 +185,6 @@
     var normalBasemap = setUpMapboxLayer('leereis.o64o8a6a', 'pk.eyJ1IjoibGVlcmVpcyIsImEiOiJjaWdsNHkyaWEwMThhdXJrcmt0bXp6a2Z0In0.FdOBAP8wZrYj2hEohJGMpw');
 
     map.addLayer(normalBasemap);
-    
-    //*******Slider script for color
-      function hexFromRGB(r, g, b) {
-        var hex = [
-          r.toString( 16 ),
-          g.toString( 16 ),
-          b.toString( 16 )
-        ];
-        $.each( hex, function( nr, val ) {
-          if ( val.length === 1 ) {
-            hex[ nr ] = "0" + val;
-          }
-        });
-        return hex.join( "" ).toUpperCase();
-      }
-
     
     //***********************************************
     // 1. CREATE OVERLAY 
@@ -245,17 +242,49 @@
     /*Define the function that will take in our weights and output a final index*/
     function updateWeights() {
       weights = [
-        $( "#red" ).slider( "value" ),
-        $( "#green" ).slider( "value" ),
-        $( "#blue" ).slider( "value" ),
-        0,
-        0,
+        $( "#auto" ).slider( "value" ),
+        $( "#buvi" ).slider( "value" ),
+        $( "#disad" ).slider( "value" ),
+        $( "#fupo" ).slider( "value" ),
         0,
         0,
         0,
         0,
         0
       ];
+    }
+    
+    function sortNumber(a,b) {
+      return a - b;
+    }
+
+    function quantile_cutpoints(items, n) {
+        items.sort(sortNumber);
+        var size = ~~(items.length / n);
+        var cuts = [items[0] - 1];
+        var done = size;
+        do {
+            cuts.push(items[done - 1]);
+            done = done + size;
+        } while(done + size <= items.length);
+        cuts.push(items[items.length - 1]);
+        return cuts;
+    }
+    
+    var bins = 7;
+
+//    var cutpoints = quantile_cutpoints(arr, bins);
+//    console.log(quantiles);
+
+    function updateCutpoints() {
+      // Zeroth, create an empty Array to contain all the weightedValues
+      values = [];
+      // First, collect each feature's weightedValue
+      for(var i = 0; i < dataset.features.length; i++) {
+        values.push(dataset.features[i].weightedValue);
+      }
+      // Second, assign new cutpoints to the cutpoints variable 
+      cutpoints = quantile_cutpoints(values, bins);
     }
     
     function updateDisplay() {
@@ -265,41 +294,50 @@
     }
     
     /*Slider functions*/
-    
-//       function updateLayer() {
-//       var red = $( "#red" ).slider( "value" ),
-//           green = $( "#green" ).slider( "value" ),
-//           blue = $( "#blue" ).slider( "value" ), 
-//           hex = hexFromRGB( red, green, blue );
-//       overlay.setStyle({
-//             //weight: 2,
-//             //color: '#666',
-//             fillColor: "#" + hex
-//         });
-//       }
-      
+          
       function refreshBlockGroups() {
+        var value = $("#auto").slider("option","value");
+        $("#auto").find(".ui-slider-handle").text(value);
+        // I want to show each slider's value on its handle
+        // This just needs to be rewritten for each slider, probably with a for loop over an array of strings, each one slider's name
+        // Another issue that this makes particularly obvious though is that the displayed value is always one behind what is truly there
+        // It only gets updated to the "true" value when the user releases the slider, which is probably undesired behavior.
+        // Not sure how to fix this though.
         updateWeights();
         updateValue();
+        updateCutpoints();
         updateDisplay();
         colorMap();
       }
       
       $(function() {
-        $( "#red, #green, #blue" ).slider({
+        $( "#auto, #buvi, #disad, #fupo" ).slider({
           orientation: "horizontal",
           range: "max",
-          min: -1,
-          max: 1,
+          min: -1.0,
+          max: 1.0,
           step: 0.1,
-          value: 0,
+          value: 0.0,
           slide: refreshBlockGroups,
           change: refreshBlockGroups
         });
-        $( "#red" ).slider( "value", 1 );
-//         $( "#green" ).slider( "value", 140 );
-//         $( "#blue" ).slider( "value", 60 );
+        $( "#auto" ).slider( "value", 1.0 );
+        $( "#buvi" ).slider( "value", 1.0 );
+        $( "#disad" ).slider( "value", 0.9 );
+        $( "#fupo" ).slider( "value", 0.6 );
       });
+
+// For reference in setting initial slider values:      
+//var weights = [1.0, // auto
+//               1.0, // buvi
+//               0.9, // disad
+//               0.6, // fupo
+//               0.0, // luco
+//               0.0, // lufe
+//               0.7, // res
+//               0.0, // tcco
+//               0.0]; // tcfe
+
 
     
     //map.on('moveend', function() { 
