@@ -54,20 +54,9 @@
     margin: 15px;
   }
   /* Color slider stylings*/
-  #swatch {
-    width: 120px;
-    height: 100px;
-    margin-top: 18px;
-    margin-left: 350px;
-    background-image: none;
-    z-index: 10;
-  }
   #red .ui-slider-range { background: #ffffff; }
-  /*#red .ui-slider-handle { border-color: #ef2929; }*/
   #green .ui-slider-range { background: #ffffff; }
-/*   #green .ui-slider-handle { border-color: #8ae234; } */
   #blue .ui-slider-range { background: #ffffff; }
-/*   #blue .ui-slider-handle { border-color: #729fcf; } */
   
     </style>
 </head>
@@ -141,8 +130,6 @@
 //     ])
   }
   
-  toggle = 'blue';
-  
   function getColor(feature) {
     if(feature.weightedValue > 0.5) {
       return 'red';}
@@ -150,6 +137,7 @@
       return 'blue';}
   }
   
+  //For each feature, returns the styling
   function mapStyle(feature) {
     return {
         fillColor: getColor(feature),
@@ -160,6 +148,7 @@
     };
   }
   
+  //Whenever called, styles the map
   function colorMap() {
     if(!overlay)
       return;
