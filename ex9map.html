@@ -47,7 +47,7 @@
       font-weight: bold;
     }
     
-    #auto, #buvi, #disad, #fupo {
+    #auto, #buvi, #disad, #fupo, #luco, #lufe, #res, #tcco, #tcfe {
 /*    position:'bottomleft';  How to move them away from top left? */
     clear: left;
     width: 300px;
@@ -79,9 +79,14 @@
     <!--<img src="MapLegend.png" style="padding-right: 5px; z-index: 0; position: absolute; bottom: 124px; right: 0px;">-->
     <!-- These are ass-ugly, but they appear to work. Clean at another point! -->
     <div id="auto">Low Automobility</div>
-    <div id="buvi"></div>
-    <div id="disad"></div>
-    <div id="fupo"></div>
+    <div id="disad">Disadvantaged Populations</div>
+    <div id="res">Resiliency</div>
+    <div id="fupo">Future Potential</div>
+    <div id="buvi">Business Viability</div>
+    <div id="tcco">High Transportation Connectivity</div>
+    <div id="tcfe">Low Transportation Connectivity</div>
+    <div id="luco">High Land Use Intensity</div>
+    <div id="lufe">Low Land Use Intensity</div>
 <!--     <div id="swatch" class="ui-widget-content ui-corner-all"></div> -->
     <script type="text/javascript">
     
@@ -137,7 +142,7 @@
   
   // Initialize cutpoints based on ArcMap values; these will change very soon, but good to have a sensical first display
   cutpoints = [-1.0, 1.416310, 1.670429, 1.914083, 2.158158, 2.496907, 2.827570, 3.521689];
-  colors = ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4']
+  colors = ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4'] // These are from ColorBrewer 2.0 - maybe attribute?
   
   function getColor(feature) {
     // Iterate over our several quantiles; if the feature falls into one, return that quantile's color
@@ -208,10 +213,11 @@
 //       test = e
 //       console.log(e);
       e.target.bindPopup(
-        '<b>id: </b>' + e.target.feature.id + '<br />' + 
-        '<b>ix_auto_p: </b>' + e.target.feature.properties.ix_auto_p + '<br />' + 
-        '<b>ix_disad_p: </b>' + e.target.feature.properties.ix_disad_p + '<br />' + 
-        '<b>value: </b>' + e.target.feature.weightedValue + '<br />'
+//        '<b>id: </b>' + e.target.feature.id + '<br />' + 
+//        '<b>ix_auto_p: </b>' + e.target.feature.properties.ix_auto_p + '<br />' + 
+//        '<b>ix_disad_p: </b>' + e.target.feature.properties.ix_disad_p + '<br />' + 
+        '<b>Suitability: </b>' + e.target.feature.weightedValue + '<br />'
+        // http://gis.stackexchange.com/questions/31951/how-to-show-a-popup-on-mouse-over-not-on-click has info on how to show a popup on mouseover instead
       );
     }
     
@@ -246,11 +252,11 @@
         $( "#buvi" ).slider( "value" ),
         $( "#disad" ).slider( "value" ),
         $( "#fupo" ).slider( "value" ),
-        0,
-        0,
-        0,
-        0,
-        0
+        $( "#luco" ).slider( "value" ),
+        $( "#lufe" ).slider( "value" ),
+        $( "#res" ).slider( "value" ),
+        $( "#tcco" ).slider( "value" ),
+        $( "#tcfe" ).slider( "value" )
       ];
     }
     
@@ -298,6 +304,7 @@
       function refreshBlockGroups() {
         var value = $("#auto").slider("option","value");
         $("#auto").find(".ui-slider-handle").text(value);
+        console.log($("#auto").slider("value"));
         // I want to show each slider's value on its handle
         // This just needs to be rewritten for each slider, probably with a for loop over an array of strings, each one slider's name
         // Another issue that this makes particularly obvious though is that the displayed value is always one behind what is truly there
@@ -311,7 +318,7 @@
       }
       
       $(function() {
-        $( "#auto, #buvi, #disad, #fupo" ).slider({
+        $( "#auto, #buvi, #disad, #fupo, #luco, #lufe, #res, #tcco, #tcfe" ).slider({
           orientation: "horizontal",
           range: "max",
           min: -1.0,
@@ -325,6 +332,11 @@
         $( "#buvi" ).slider( "value", 1.0 );
         $( "#disad" ).slider( "value", 0.9 );
         $( "#fupo" ).slider( "value", 0.6 );
+        $( "#luco" ).slider( "value", 0.0 );
+        $( "#lufe" ).slider( "value", 0.0 );
+        $( "#res" ).slider( "value", 0.7 );
+        $( "#tcco" ).slider( "value", 0.0 );
+        $( "#tcfe" ).slider( "value", 0.0 );
       });
 
 // For reference in setting initial slider values:      
