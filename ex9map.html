@@ -300,11 +300,15 @@
     }
     
     /*Slider functions*/
-          
-      function refreshBlockGroups() {
+      var test;    
+      
+      function refreshBlockGroups(event, ui) {
         var value = $("#auto").slider("option","value");
         $("#auto").find(".ui-slider-handle").text(value);
-        console.log($("#auto").slider("value"));
+        //console.log($("#auto").slider("value"));
+        test = event;
+        console.log(event);
+        console.log(ui);
         // I want to show each slider's value on its handle
         // This just needs to be rewritten for each slider, probably with a for loop over an array of strings, each one slider's name
         // Another issue that this makes particularly obvious though is that the displayed value is always one behind what is truly there
