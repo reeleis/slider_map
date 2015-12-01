@@ -4,16 +4,16 @@
     <title>THE FUTURE OF TRANSPORTATION PLANNING brought to you by A TON OF BADASS NEW GODS</title>
     
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css' />
-<!--     <link rel="stylesheet" href="leaflet-slider.css"/> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js'></script>
-<!--     <script src="leaflet-slider.js"></script> -->
-    <!--Links for Drew's sliders-->
+
+    <!--Links for sliders-->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
-    <!--End of Drew's slider text-->
+    <!--End of slider imports-->
     
     <!--Importing math for dot product-->
     <script src="numeric-1.2.6.min.js"></script>
@@ -23,53 +23,46 @@
     
     <style type='text/css'>
     
-    body { 
-      margin: 0; 
-      padding: 0; 
-      font-family: Helvetica, sans-serif;
-    }
+      body { 
+        margin: 0; 
+        padding: 0; 
+        font-family: Helvetica, sans-serif;
+      }
     
-    #map {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      z-index:-1;
-    }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index:-1;
+      }
     
-    #overlay {
-      position: absolute;
-      top: 10px;
-      left: 80px;
-      padding: 20px;
-      background-color: rgba(255,255,255,0.9);
-      font-size: 24px;
-      font-weight: bold;
-    }
-    
-    #auto, #buvi, #disad, #fupo, #luco, #lufe, #res, #tcco, #tcfe {
-/*    position:'bottomleft';  How to move them away from top left? */
-    clear: left;
-    width: 300px;
-    margin: 15px;
-  }
-  /* Color slider stylings*/
-  #swatch {
-    width: 120px;
-    height: 100px;
-    margin-top: 18px;
-    margin-left: 350px;
-    background-image: none;
-    z-index: 10;
-  }
-  #auto .ui-slider-range { background: #ffffff; }
-  #buvi .ui-slider-range { background: #ffffff; }
-  #disad .ui-slider-range { background: #ffffff; }
-  #fupo .ui-slider-range { background: #ffffff; }
+      #overlay {
+        position: absolute;
+        top: 10px;
+        left: 80px;
+        padding: 20px;
+        background-color: rgba(255,255,255,0.9);
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Color slider stylings*/
+      .ui-slider-range { background: #ffffff; }
   
-/*   #disad .ui-slider-handle { border-color: #729fcf; } */
-  
+      .slider {
+        clear: left;
+        width: 300px;
+        margin: 15px;
+      }
+      
+      #sliders {
+        background-color: rgba(255,255,255,1);
+        cursor: auto;
+        pointer-events: auto;
+      }
     </style>
+    
 </head>
 
 <body>
@@ -78,15 +71,18 @@
     
     <!--<img src="MapLegend.png" style="padding-right: 5px; z-index: 0; position: absolute; bottom: 124px; right: 0px;">-->
     <!-- These are ass-ugly, but they appear to work. Clean at another point! -->
-    <div id="auto">Low Automobility</div>
-    <div id="disad">Disadvantaged Populations</div>
-    <div id="res">Resiliency</div>
-    <div id="fupo">Future Potential</div>
-    <div id="buvi">Business Viability</div>
-    <div id="tcco">High Transportation Connectivity</div>
-    <div id="tcfe">Low Transportation Connectivity</div>
-    <div id="luco">High Land Use Intensity</div>
-    <div id="lufe">Low Land Use Intensity</div>
+    
+    <div id="sliders" class="leaflet-top leaflet-right">
+      <div id="auto" class="slider">Low Automobility</div>
+      <div id="disad" class="slider">Disadvantaged Populations</div>
+      <div id="res" class="slider">Resiliency</div>
+      <div id="fupo" class="slider">Future Potential</div>
+      <div id="buvi" class="slider">Business Viability</div>
+      <div id="tcco" class="slider">High Transportation Connectivity</div>
+      <div id="tcfe" class="slider">Low Transportation Connectivity</div>
+      <div id="luco" class="slider">High Land Use Intensity</div>
+      <div id="lufe" class="slider">Low Land Use Intensity</div>
+    </div>
 <!--     <div id="swatch" class="ui-widget-content ui-corner-all"></div> -->
     <script type="text/javascript">
     
