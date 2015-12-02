@@ -270,9 +270,18 @@
     map.fitBounds(overlay.getBounds());
     
     /*Define the function that will take in our weights and output a final index*/
-    var sliderlist = ["#auto","#buvi","#disad","#fupo","#luco","#lufe","#res","#tcco","#tcfe"];
+    var sliderList = ["#auto","#buvi","#disad","#fupo","#luco","#lufe","#res","#tcco","#tcfe"];
+    
+    //This is helpful for initialization but probably not needed thanks to the
+    //updateSingleWeight function
     function updateWeights() {
-      weights = [for (x of sliderlist) $( x ).slider( "value" )];
+      weights = [for (x of sliderList) $( x ).slider( "value" )];
+    }
+    
+    //Looks up the name of the slider in the sliderList and replaces the value in weight
+    //with the new value (passed in by the event)
+    function updateSingleWeight(sliderName, value){
+      weights[sliderList.indexOf(sliderName)] = value
     }
     
     function sortNumber(a,b) {
@@ -315,24 +324,15 @@
     }
     
     /*Slider functions*/
-      var test;    
-      
       function refreshBlockGroups(event, ui) {
-        var value = $("#auto").slider("option","value");
-        $("#auto").find(".ui-slider-handle").text(value);
-        //console.log($("#auto").slider("value"));
-        test = event;
-        console.log(event);
-        console.log(ui);
-        // I want to show each slider's value on its handle
-        // This just needs to be rewritten for each slider, probably with a for loop over an array of strings, each one slider's name
-        // Another issue that this makes particularly obvious though is that the displayed value is always one behind what is truly there
-        // It only gets updated to the "true" value when the user releases the slider, which is probably undesired behavior.
-        // Not sure how to fix this though.
-        updateWeights();
+//         $('#' + event.target.id).slider( "value", ui.value);
+        var name = '#' + event.target.id;
+        updateSingleWeight(name, ui.value);
+        $(name).find(".ui-slider-handle").text(ui.value);
+//         updateWeights();
         updateValue();
         updateCutpoints();
-        updateDisplay();
+//         updateDisplay();
         colorMap();
       }
       
