@@ -33,7 +33,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 100%;
+        width: 70%;
         z-index:-1;
       }
     
@@ -52,15 +52,33 @@
   
       .slider {
         clear: left;
-        width: 300px;
-        margin: 15px;
+/*         width: 300px; */
+        width:90%;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+      
+      .slider-title {
+        font-size:10pt;
+        margin-left: 15px;
+        margin-top:10px;
+      }
+      
+      .description {
+        font-size:10pt;
+        margin-left: 15px;
+        margin-top:10px;
       }
       
       #sliders {
         background-color: rgba(255,255,255,1);
         cursor: auto;
         pointer-events: auto;
+        width:30%;
       }
+      
     </style>
     
 </head>
@@ -73,15 +91,30 @@
     <!-- These are ass-ugly, but they appear to work. Clean at another point! -->
     
     <div id="sliders" class="leaflet-top leaflet-right">
-      <div id="auto" class="slider">Low Automobility</div>
-      <div id="disad" class="slider">Disadvantaged Populations</div>
-      <div id="res" class="slider">Resiliency</div>
-      <div id="fupo" class="slider">Future Potential</div>
-      <div id="buvi" class="slider">Business Viability</div>
-      <div id="tcco" class="slider">High Transportation Connectivity</div>
-      <div id="tcfe" class="slider">Low Transportation Connectivity</div>
-      <div id="luco" class="slider">High Land Use Intensity</div>
-      <div id="lufe" class="slider">Low Land Use Intensity</div>
+      <div class="description"><h3>Index Weights</h3></div>
+      <div class="slider-title">Low Automobility</div>
+      <div id="auto" class="slider"></div>
+      <div class="slider-title">Disadvantaged Populations</div>
+      <div id="disad" class="slider"></div>
+      <div class="slider-title">Resiliency</div>
+      <div id="res" class="slider"></div>
+      <div class="slider-title">Future Potential</div>
+      <div id="fupo" class="slider"></div>
+      <div class="slider-title">Business Viability</div>
+      <div id="buvi" class="slider"></div>
+      <div class="slider-title">High Transportation Connectivity</div>
+      <div id="tcco" class="slider"></div>
+      <div class="slider-title">Low Transportation Connectivity</div>
+      <div id="tcfe" class="slider"></div>
+      <div class="slider-title">High Land Use Intensity</div>
+      <div id="luco" class="slider"></div>
+      <div class="slider-title">Low Land Use Intensity</div>
+      <div id="lufe" class="slider"></div>
+      
+      <div class="description">
+        <h3>About</h3>
+        <p>Descriptive text goes here!  Perhaps a <a href="http://www.218consultants.com">link</a> to other stuff?</p>
+      </div>
     </div>
 <!--     <div id="swatch" class="ui-widget-content ui-corner-all"></div> -->
     <script type="text/javascript">
@@ -134,11 +167,9 @@
 //    function preprocess() {
 //    }
   
-  toggle = 'blue';
-  
   // Initialize cutpoints based on ArcMap values; these will change very soon, but good to have a sensical first display
-  cutpoints = [-1.0, 1.416310, 1.670429, 1.914083, 2.158158, 2.496907, 2.827570, 3.521689];
-  colors = ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4'] // These are from ColorBrewer 2.0 - maybe attribute?
+  var cutpoints = [-1.0, 1.416310, 1.670429, 1.914083, 2.158158, 2.496907, 2.827570, 3.521689];
+  var colors = ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4'] // These are from ColorBrewer 2.0 - maybe attribute?
   
   function getColor(feature) {
     // Iterate over our several quantiles; if the feature falls into one, return that quantile's color
@@ -220,11 +251,8 @@
     // specify how to load the individual features 
     var overlayOptions = { 
         onEachFeature: function (feature, layer) {
-            layer.bindPopup('<b>id: </b>' + feature.id + '<br />' + 
-                            '<b>ix_auto_p: </b>' + feature.properties.ix_auto_p + '<br />' + 
-                            '<b>ix_disad_p: </b>' + feature.properties.ix_disad_p + '<br />' + 
-                            '<b>value: </b>' + feature.weightedValue + '<br />'
-                            );
+            //This will probably never display because we replace using whenClicked function
+            layer.bindPopup('Loading...');
             layer.on({
               click: whenClicked
             });
@@ -242,18 +270,9 @@
     map.fitBounds(overlay.getBounds());
     
     /*Define the function that will take in our weights and output a final index*/
+    var sliderlist = ["#auto","#buvi","#disad","#fupo","#luco","#lufe","#res","#tcco","#tcfe"];
     function updateWeights() {
-      weights = [
-        $( "#auto" ).slider( "value" ),
-        $( "#buvi" ).slider( "value" ),
-        $( "#disad" ).slider( "value" ),
-        $( "#fupo" ).slider( "value" ),
-        $( "#luco" ).slider( "value" ),
-        $( "#lufe" ).slider( "value" ),
-        $( "#res" ).slider( "value" ),
-        $( "#tcco" ).slider( "value" ),
-        $( "#tcfe" ).slider( "value" )
-      ];
+      weights = [for (x of sliderlist) $( x ).slider( "value" )];
     }
     
     function sortNumber(a,b) {
@@ -349,12 +368,6 @@
 //               0.7, // res
 //               0.0, // tcco
 //               0.0]; // tcfe
-
-
-    
-    //map.on('moveend', function() { 
-    // alert(map.getBounds().toBBoxString());
-    //});
     
     </script>
 </body>
