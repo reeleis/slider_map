@@ -275,7 +275,19 @@
     //This is helpful for initialization but probably not needed thanks to the
     //updateSingleWeight function
     function updateWeights() {
-      weights = [for (x of sliderList) $( x ).slider( "value" )];
+//       Turns out list comprehensions are not implemented in all js versions so commenting this out
+//       weights = [for (x of sliderList) $( x ).slider( "value" )];
+      weights = [
+        $( "#auto" ).slider( "value" ),
+        $( "#buvi" ).slider( "value" ),
+        $( "#disad" ).slider( "value" ),
+        $( "#fupo" ).slider( "value" ),
+        $( "#luco" ).slider( "value" ),
+        $( "#lufe" ).slider( "value" ),
+        $( "#res" ).slider( "value" ),
+        $( "#tcco" ).slider( "value" ),
+        $( "#tcfe" ).slider( "value" )
+      ];
     }
     
     //Looks up the name of the slider in the sliderList and replaces the value in weight
