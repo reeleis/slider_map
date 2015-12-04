@@ -165,10 +165,8 @@
                 e.properties.ix_disad_p,
                 e.properties.ix_fupo_p,
                 e.properties.ix_luco_p,
-                e.properties.ix_lufe_p,
                 e.properties.ix_res_p,
-                e.properties.ix_tcco_p,
-                e.properties.ix_tcfe_p]; 
+                e.properties.ix_tcco_p]; 
     return e;
     });  
     
@@ -179,10 +177,8 @@
                    0.9, // disad
                    0.6, // fupo
                    0.0, // luco
-                   0.0, // lufe
                    0.7, // res
-                   0.0, // tcco
-                   0.0]; // tcfe
+                   0.0]; // tcco
     
     //Take the dot product of the weights and index values and put in variable weightedValue
     function updateValue() {
@@ -322,7 +318,7 @@
     
         
     /*Define the function that will take in our weights and output a final index*/
-    var sliderList = ["#auto","#buvi","#disad","#fupo","#luco","#lufe","#res","#tcco","#tcfe"];
+    var sliderList = ["#auto", "#buvi", "#disad", "#fupo", "#luco", "#res", "#tcco"];
     
     //This is helpful for initialization but probably not needed thanks to the
     //updateSingleWeight function
@@ -335,10 +331,8 @@
         $( "#disad" ).slider( "value" ),
         $( "#fupo" ).slider( "value" ),
         $( "#luco" ).slider( "value" ),
-        $( "#lufe" ).slider( "value" ),
         $( "#res" ).slider( "value" ),
-        $( "#tcco" ).slider( "value" ),
-        $( "#tcfe" ).slider( "value" )
+        $( "#tcco" ).slider( "value" )
       ];
     }
     
@@ -401,7 +395,7 @@
       }
       
       $(function() {
-        $( "#auto, #buvi, #disad, #fupo, #luco, #lufe, #res, #tcco, #tcfe" ).slider({
+        $( "#auto, #buvi, #disad, #fupo, #luco, #res, #tcco" ).slider({
           orientation: "horizontal",
           range: "max",
           min: -1.0,
@@ -416,10 +410,8 @@
         $( "#disad" ).slider( "value", 0.9 );
         $( "#fupo" ).slider( "value", 0.6 );
         $( "#luco" ).slider( "value", 0.0 );
-        $( "#lufe" ).slider( "value", 0.0 );
         $( "#res" ).slider( "value", 0.7 );
         $( "#tcco" ).slider( "value", 0.0 );
-        $( "#tcfe" ).slider( "value", 0.0 );
       });
 
 // For reference in setting initial slider values:      
@@ -428,10 +420,8 @@
 //               0.9, // disad
 //               0.6, // fupo
 //               0.0, // luco
-//               0.0, // lufe
 //               0.7, // res
-//               0.0, // tcco
-//               0.0]; // tcfe
+//               0.0] // tcco
     
     </script>
 </body>
