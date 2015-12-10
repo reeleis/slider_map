@@ -132,22 +132,14 @@
       <div id="disad" class="slider"></div>
       <div class="slider-title">Resiliency</div>
       <div id="res" class="slider"></div>
-      <div class="slider-title">Future Potential</div>
+      <div class="slider-title">Future Growth Potential</div>
       <div id="fupo" class="slider"></div>
-      <div class="slider-title">Business Viability</div>
+      <div class="slider-title">New Service Viability</div>
       <div id="buvi" class="slider"></div>
       <div class="slider-title">High Transportation Connectivity</div>
       <div id="tcco" class="slider"></div>
-<!-- 
-      <div class="slider-title">Low Transportation Connectivity</div>
-      <div id="tcfe" class="slider"></div>
- -->
       <div class="slider-title">High Land Use Intensity</div>
       <div id="luco" class="slider"></div>
-<!-- 
-      <div class="slider-title">Low Land Use Intensity</div>
-      <div id="lufe" class="slider"></div>
- -->
     </div>
     <script type="text/javascript">
     
@@ -156,11 +148,8 @@
     
     //These are the variable names within the dataset:
     //'ix_auto_p', 'ix_buvi_p', 'ix_disad_p', 'ix_fupo_p', 'ix_luco_p', 'ix_lufe_p', 'ix_res_p', 'ix_tcco_p', 'ix_tcfe_p', 'sc_all'
-    //sc_all doesn't participate in the dot product; rather, we include it only to initialize the choropleth values for each feature
-    //at some point soon it might make sense to just drop it from the dataset entirely; 
-    //in any case we will overwrite it every time the sliders move.
     
-    //Add a new array with the indices
+    //Add a new vector with the indices for simplified multiplication
     dataset.features = dataset.features.map(function(e) { 
     e.vector = [e.properties.ix_auto_p,
                 e.properties.ix_buvi_p,
@@ -192,9 +181,6 @@
     
     updateValue();
   
-//    function preprocess() {
-//    }
-  
   // Initialize cutpoints based on ArcMap values; these will change very soon, but good to have a sensical first display
   var cutpoints = [-1.0, 1.416310, 1.670429, 1.914083, 2.158158, 2.496907, 2.827570, 3.521689];
 //  var colors = ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4'  // These are from ColorBrewer 2.0 - maybe attribute?
@@ -217,7 +203,6 @@
         fillColor: getColor(feature),
         color: 'black', opacity: 1, weight: 0.5,
         opacity: 1,
-        //fillOpacity: getOpacity(data),
         fillOpacity: 0.8,
     };
   }
@@ -252,10 +237,10 @@
 
     // specify what the circle markers should look like
     
+    var overlay;
+    
     function overlayStyles(color) {
       var style = {
-        //radius: 6,
-        // fill styles
         fillColor: color, fillOpacity: 0.8,
         // border styles
         color: 'black', opacity: 1, weight: 1
@@ -263,27 +248,21 @@
       return style;
     }    
         
-    //Updates the popup whenever a block group is clicked
+    //Updates the popup whenever a block group is clicked - not used
     function whenClicked(e) {
-      // e = event
-//       test = e
-//       console.log(e);
       e.target.bindPopup(
-//        '<b>id: </b>' + e.target.feature.id + '<br />' + 
-//        '<b>ix_auto_p: </b>' + e.target.feature.properties.ix_auto_p + '<br />' + 
-//        '<b>ix_disad_p: </b>' + e.target.feature.properties.ix_disad_p + '<br />' + 
         '<b>Suitability: </b>' + e.target.feature.weightedValue.toFixed(2) + '<br />'
         // http://gis.stackexchange.com/questions/31951/how-to-show-a-popup-on-mouse-over-not-on-click has info on how to show a popup on mouseover instead
       );
+      e.target.openPopup();
     }
-    
+             
     // specify how to load the individual features 
     var overlayOptions = { 
         onEachFeature: function (feature, layer) {
-            //This will probably never display because we replace using whenClicked function
-            layer.bindPopup('Loading...');
             layer.on({
-              click: whenClicked
+//              Removed popups since the numbers won't be meaningful to users
+//               click: whenClicked,
             });
         },
         pointToLayer: function (feature, latlng) {
@@ -292,7 +271,7 @@
     };
     
     // create the layer and add to map
-    var overlay = L.geoJson(dataset, overlayOptions); 
+    overlay = L.geoJson(dataset, overlayOptions); 
     map.addLayer(overlay);
     
     // fit the map window to the data points
@@ -378,22 +357,14 @@
       cutpoints = quantile_cutpoints(values, bins);
     }
     
-    function updateDisplay() {
-        //console.log('In theory, want to close any open popups here')
-        //The following line doesn't close any open popups :-(
-        //overlay.closePopup
-    }
     
     /*Slider functions*/
       function refreshBlockGroups(event, ui) {
-//         $('#' + event.target.id).slider( "value", ui.value);
         var name = '#' + event.target.id;
         updateSingleWeight(name, ui.value);
         $(name).find(".ui-slider-handle").text(ui.value.toFixed(1));
-//         updateWeights();
         updateValue();
         updateCutpoints();
-//         updateDisplay();
         colorMap();
       }
       
